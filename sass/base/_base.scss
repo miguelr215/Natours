@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /** 
+    browser default is 16px, we want 10px so 10/16 = 0.625 
+    10px = 1rem 
+    **/
+}
+
+body {
+    box-sizing: border-box;
+}
