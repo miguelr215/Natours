@@ -12,6 +12,7 @@ html {
     browser default is 16px, we want 10px so 10/16 = 0.625 
     10px = 1rem 
     **/
+    scroll-behavior: smooth;
 }
 
 body {
