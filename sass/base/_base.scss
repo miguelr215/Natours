@@ -13,6 +13,19 @@ html {
     10px = 1rem 
     **/
     scroll-behavior: smooth;
+
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1 rem = 9px; 9/16px = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px; 8/16px = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px;  12/16 = 75%
+    }
 }
 
 body {
