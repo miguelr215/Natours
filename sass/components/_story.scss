@@ -28,13 +28,24 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%); // element must be floated and have width and height in order to use shape-outside
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        // -webkit-shape-outside: circle(50% at 50% 50%);
+        // shape-outside: circle(50% at 50% 50%); 
+        // element must be floated and have width and height in order to use shape-outside
+        // -webkit-clip-path: circle(50% at 50% 50%);
+        // clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg); // when an element is floated it is better to use transform than to use margin or padding
         position: relative;
-        backface-visibility: hidden;
+        overflow: hidden;
+        // backface-visibility: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
@@ -44,8 +55,8 @@
     &__image {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
-        transition: all .5s;
         backface-visibility: hidden;
+        transition: all .5s;
 
         @include respond(phone) {
             transform: translateX(-4rem) skewX(0);
@@ -82,7 +93,7 @@
 
     &:hover &__image {
         transform: translateX(-4rem) scale(1);
-        filter: blur(3px) brightness(80%) hue-rotate(45deg);
+        filter: blur(3px) brightness(80%);
     }
 
 }

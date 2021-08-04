@@ -637,21 +637,25 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    backface-visibility: hidden; }
+    overflow: hidden;
+    border-radius: 50%; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .story__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
     @media (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
   .story__image {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
-    transition: all .5s;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    transition: all .5s; }
     @media (max-width: 37.5em) {
       .story__image {
         transform: translateX(-4rem) skewX(0); } }
@@ -677,7 +681,7 @@ body {
     transform: translate(-50%, -50%); }
   .story:hover .story__image {
     transform: translateX(-4rem) scale(1);
-    filter: blur(3px) brightness(80%) hue-rotate(45deg); }
+    filter: blur(3px) brightness(80%); }
 
 .header {
   height: 95vh;
