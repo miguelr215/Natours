@@ -1,4 +1,3 @@
-const navLinks = document.getElementsByClassName('navigation__link');
 const naviToggleIcon = document.getElementById('navi-toggle');
 
 const listener = function(e) {
