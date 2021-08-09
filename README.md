@@ -11,4 +11,14 @@
 
 **Screenshots:**
 
-coming soon!
+Hero
+![image of Natours hero section](https://github.com/miguelr215/Natours/blob/main/img/screenshots/Natours-hero.PNG)
+
+About section with image highlight effect
+![image of Natours about section](https://github.com/miguelr215/Natours/blob/main/img/screenshots/Natours-about.PNG)
+
+Price card hover effect
+![image of Natours pricing section](https://github.com/miguelr215/Natours/blob/main/img/screenshots/Natours-pricing-hover-effect.PNG)
+
+Testimonials with video background
+![image of Natours testimonials section](https://github.com/miguelr215/Natours/blob/main/img/screenshots/Natours-testimonials.PNG)
